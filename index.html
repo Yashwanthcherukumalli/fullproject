@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="register">
+        <label for="registerFirstName">First Name:</label>
+        <input type="text" id="registerFirstName" name="registerFirstName">
+        
+        <label for="registerLastName">Last Name:</label>
+        <input type="text" id="registerLastName" name="registerLastName">
+        
+        <label for="registerEmail">Email:</label>
+        <input type="email" id="registerEmail" name="registerEmail">
+
+        <label for="registerPhone">Phone:</label>
+        <input type="text" id="registerPhone" name="registerPhone">
+
+        <label for="registerAge">Age:</label>
+        <input type="number" id="registerAge" name="registerAge">
+        
+        <label for="registerUserID">User ID:</label>
+        <input type="text" id="registerUserID" name="registerUserID">
+        
+        <label for="registerPassword">Password:</label>
+        <div class="password-container">
+            <input type="text" id="registerPassword" name="registerPassword">
+            <button id="togglePassword">Show</button>
+        </div>
+        <div class="btn-div">
+            <button id="signupbtn" onclick="signupbtn()">signup</button>
+        <button onclick="showLoginForm()">Already have an account? Login</button>
+        </div>
+        
+    </div>
+    
+    
+    <div class="login">
+        <label for="loginUserID">User ID:</label>
+        <input type="text" id="loginUserID" name="loginUserID">
+        
+        <label for="loginPassword">Password:</label>
+        <div class="password-container">
+            <input type="text" id="loginPassword" name="registerPassword">
+            <button type="button" id="togglePassword2">Show</button>
+        </div>
+        <button id="loginbtn" onclick="login()">login</button>
+        <!-- Update the onclick attribute of the button to call signup() -->
+        <button onclick="signupall()">Don't have an account? Register</button>
+    </div>
+   <!-- HTML -->
+<div class="dashboard">
+    <div class="nav-bar">
+        <div class="part1">
+            <div id="search">
+                <button onclick="searchSome()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <input type="search" id="searchinput" />
+            </div>
+            <div id="showselecteditem">
+                <div id="subshowselecteditem">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="part2"></div>
+            <div class="part3" >
+                <i class="fas fa-cart-shopping" onclick="toggleCart()"></i>
+                <div id="cartnumber"></div>
+                <div id="cart-dropdown">
+                    <!-- Content of the cart dropdown goes here -->
+                    
+                </div>
+
+
+        </div>
+        <button onclick="clearCart()">Clear Cart</button>
+       
+        <div class="part4">
+            <button onclick="showLoginForm()">Logout</button>
+        </div>
+    </div>
+    <div id="cardsContainer"></div>
+</div>
+
+       
+    </div>
+    <script src="script.js"></script>
+</body> 
+</html>
